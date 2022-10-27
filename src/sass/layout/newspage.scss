@@ -1,0 +1,13 @@
+@include breakpoint($mobile + 1) {
+    .newspage-content {
+        margin-top: $desktop-section-pad;
+        margin-bottom: $desktop-section-pad;
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    .newspage-content {
+        margin-top: $section-pad;
+        margin-bottom: $section-pad;
+    }
+}

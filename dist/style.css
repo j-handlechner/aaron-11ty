@@ -906,5 +906,17 @@ header .headline-button-wrapper a:hover {
     cursor: pointer;
   }
 }
+@media (min-width: 50rem) {
+  .newspage-content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 0rem) and (max-width: 49.9375rem) {
+  .newspage-content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
