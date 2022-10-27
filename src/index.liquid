@@ -1,43 +1,7 @@
+---
+layout: primary
+---
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Aaron G. Miller</title>
-        <link rel='stylesheet' href='/style.css'>
-
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#2e2e2e">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#2e2e2e">
-    </head>
-    <body>
-        <div class="hide-overflow-x">
-            <header>
-                <a href="/"><h1><strong>Aaron G. Miller</strong> | Choreographer</h1></a>
-                <nav>
-                    <button id="hamburger" aria-label="closed">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                    </button>
-                    <ul>
-                        <li><a href="#workshops">Workshops</a></li>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#news">News</a></li>
-                    </ul>                
-                </nav>
-                <div class="headline-button-wrapper">
-                    <h2>I believe you can dance.</h2>
-                    <a href="#" class="button">Book Workshop</a>
-                </div>
-            </header>
-    
-
-            
 <main>
     <section id="workshops">
         <p class="super-headline">Find your entrance level & book a workshop with Aaron</p>
@@ -153,36 +117,18 @@
         <h2>In the News</h2>
 
         <div class="news-container">
-            
+            {% assign news = collections.news | reverse %}
 
-            
+            {% for n in news limit:3 %}
             <article> 
-                <h3><a href='/news/news3/'>Sydney Dance Festival 2022</a></h3> 
-                <img sizes='(max-width: 1400px) 100vw, 1400px' srcset=' ./images/dance_festival_performance_jqsv8l_c_scale,w_200.jpg 200w, ./images/dance_festival_performance_jqsv8l_c_scale,w_922.jpg 922w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1272.jpg 1272w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1337.jpg 1337w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1400.jpg 1400w' src='./images/dance_festival_performance_jqsv8l_c_scale,w_1400.jpg' alt='Aaron performing at the Sydney dance festival 2022'>
+                <h3><a href='{{ n.url }}'>{{ n.data.title }}</a></h3> 
+                <img sizes='{{ n.data.sizes }}' srcset=' {{ n.data.srcset }}' src='{{ n.data.image }}' alt='{{ n.data.alt }}'>
                 <p> 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
+                    {{ n.data.excerpt }}
                 </p>
-                <a href='/news/news3/' class="button">Read more</a>
+                <a href='{{ n.url }}' class="button">Read more</a>
             </article>
-            
-            <article> 
-                <h3><a href='/news/news2/'>Sydney Dance Festival 2022</a></h3> 
-                <img sizes='(max-width: 1400px) 100vw, 1400px' srcset=' ./images/dance_festival_performance_jqsv8l_c_scale,w_200.jpg 200w, ./images/dance_festival_performance_jqsv8l_c_scale,w_922.jpg 922w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1272.jpg 1272w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1337.jpg 1337w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1400.jpg 1400w' src='./images/dance_festival_performance_jqsv8l_c_scale,w_1400.jpg' alt='Aaron performing at the Sydney dance festival 2022'>
-                <p> 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
-                </p>
-                <a href='/news/news2/' class="button">Read more</a>
-            </article>
-            
-            <article> 
-                <h3><a href='/news/news1/'>Sydney Dance Festival 2022</a></h3> 
-                <img sizes='(max-width: 1400px) 100vw, 1400px' srcset=' ./images/dance_festival_performance_jqsv8l_c_scale,w_200.jpg 200w, ./images/dance_festival_performance_jqsv8l_c_scale,w_922.jpg 922w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1272.jpg 1272w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1337.jpg 1337w, ./images/dance_festival_performance_jqsv8l_c_scale,w_1400.jpg 1400w' src='./images/dance_festival_performance_jqsv8l_c_scale,w_1400.jpg' alt='Aaron performing at the Sydney dance festival 2022'>
-                <p> 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
-                </p>
-                <a href='/news/news1/' class="button">Read more</a>
-            </article>
-            
+            {% endfor %}
 
             <!-- <article> 
                 <h3>"Dance Pool" 2023 sold out!</h3>
@@ -230,22 +176,3 @@
         </div>
     </section>
 </main>
-
-
-            <footer>
-                <div class="footer-container">
-                    <h4 class="item-1">Thank you for your interest in Art!</h4>
-                    <p class="item-2">© 2004 –  Aaron G. Miller</p>
-                    <a href="#" class="item-3">Imprint & Privacy</a>
-                </div> 
-            </footer>
-        </div>
-        
-        <script src='./main.js'></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function(event) {
-                MainNav.init();
-            });
-        </script>
-</body>
-</html>
