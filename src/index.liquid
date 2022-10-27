@@ -121,58 +121,14 @@ layout: primary
 
             {% for n in news limit:3 %}
             <article> 
-                <h3><a href='{{ n.url }}'>{{ n.data.title }}</a></h3> 
-                <img sizes='{{ n.data.sizes }}' srcset=' {{ n.data.srcset }}' src='{{ n.data.image }}' alt='{{ n.data.alt }}'>
+                <h3><a href='{{ n.url | append: "#content" }}'>{{ n.data.title }}</a></h3> 
+                <img sizes='{{ n.data.sizes }}' srcset=' {{ n.data.srcset }}' src='{{ n.data.src }}' alt='{{ n.data.alt }}'>
                 <p> 
                     {{ n.data.excerpt }}
                 </p>
-                <a href='{{ n.url }}' class="button">Read more</a>
+                <a href='{{ n.url | append: "#content"}}' class="button">Read more</a>
             </article>
             {% endfor %}
-
-            <!-- <article> 
-                <h3>"Dance Pool" 2023 sold out!</h3>
-                <img
-                    sizes="(max-width: 1400px) 100vw, 1400px"
-                    srcset="
-                        ./images/dance_pool_group_pic_m9qg0e_c_scale,w_200.jpg 200w,
-                        ./images/dance_pool_group_pic_m9qg0e_c_scale,w_803.jpg 803w,
-                        ./images/dance_pool_group_pic_m9qg0e_c_scale,w_1157.jpg 1157w,
-                        ./images/dance_pool_group_pic_m9qg0e_c_scale,w_1283.jpg 1283w,
-                        ./images/dance_pool_group_pic_m9qg0e_c_scale,w_1400.jpg 1400w"
-                    src="./images/dance_pool_group_pic_m9qg0e_c_scale,w_1400.jpg"
-                    alt="Group picture of 'Dance Pool" >
-                <p> 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum. Stet
-                    clita kasd gubergren, no sea takimata sanctus est.
-                </p>
-                <a href="#" class="button">Read more</a>
-            </article>
-
-            <article> 
-                <h3>New London Workshop Oct. 2025</h3>
-                <img
-                    sizes="(max-width: 1400px) 100vw, 1400px"
-                    srcset="
-                        ./images/workshop_snapshot_whqaqt_c_scale,w_200.jpg 200w,
-                        ./images/workshop_snapshot_whqaqt_c_scale,w_948.jpg 948w,
-                        ./images/workshop_snapshot_whqaqt_c_scale,w_1228.jpg 1228w,
-                        ./images/workshop_snapshot_whqaqt_c_scale,w_1349.jpg 1349w,
-                        ./images/workshop_snapshot_whqaqt_c_scale,w_1400.jpg 1400w"
-                    src="./images/workshop_snapshot_whqaqt_c_scale,w_1400.jpg"
-                    alt="Aaron at a workshop">
-                <p> 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed diam voluptua. At vero
-                    eos et accusam et justo duo dolores et ea rebum. Stet
-                    clita kasd gubergren, no sea takimata sanctus est.
-                </p>
-                <a href="#" class="button">Read more</a>
-            </article> -->
         </div>
     </section>
 </main>

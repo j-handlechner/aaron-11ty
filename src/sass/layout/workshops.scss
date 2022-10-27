@@ -1,11 +1,3 @@
-#workshops {
-    .workshop-grid {
-        .level {
-
-        }
-    }
-}
-
 @include breakpoint($desktop) {
     #workshops {
         padding-top: $desktop-section-pad;

@@ -1,7 +1,12 @@
 @include breakpoint(0, $mobile) {
     #news {
         padding-top: $section-pad;
-        max-width: 425px;
+        margin-left: $content-side-pad;
+        margin-right: $content-side-pad;
+
+        h2 {
+            margin-bottom: 20px;
+        }
 
         article {
             background-color: $lightest-gray;
@@ -14,7 +19,7 @@
 
             h3 {
                 a {
-                    margin-left: $content-side-pad * 2;
+                    margin-left: $content-side-pad;
                     padding-top: $content-side-pad / 2;
                     padding-bottom: $content-side-pad / 2;
 
@@ -37,7 +42,7 @@
                 padding-top: $content-side-pad;
                 padding-left: $content-side-pad;
                 padding-right: $content-side-pad;
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
             .button {
@@ -48,7 +53,7 @@
     }
 }
 
-@include breakpoint($desktop) {
+@include breakpoint($mobile + 1) {
     #news {
         padding-top: $desktop-section-pad;
         padding-bottom: $desktop-section-pad;
@@ -72,7 +77,7 @@
 
             h3 {
                 a {
-                    margin-left: $desktop-content-side-pad / 2;
+                    margin-left: $desktop-content-side-pad;
                     padding-top: $desktop-content-side-pad / 1.5;
                     padding-bottom: $desktop-content-side-pad / 1.5;
     

@@ -2,11 +2,18 @@
 layout: primary
 ---
 
-<main class="newspage-content">
-    <h2>{{ title }}</h2>
-    <p>
+<main class="newspage-content" id="content">
+  <h2>{{ title }}</h2>
+  <p>
     <i>Written: {{ date | date: "%b %d, %Y"}}</i>
-    </p>
+  </p>
 
-    {{ content }}
+  <div class="text-image-wrapper">
+    <article class="text-wrapper">
+      {{ content }}
+    </article>
+    <img sizes='{{ sizes }}' srcset=' {{ srcset }}' src='{{ src }}' alt='{{ alt }}'>
+  </div>
+
+
 </main>
