@@ -1,0 +1,61 @@
+footer {
+    background-color: $navGray;
+    padding-left: 2 * $content-side-pad;
+    padding-top: $content-side-pad;
+    padding-bottom: $content-side-pad * 2;
+
+    h4 {
+        font-size: rem(22);
+        color: white;
+    }
+
+    p {
+        color: white;
+        font-size: 1rem;
+    }
+
+    a {
+        padding-top: 5px;
+        display: block;
+        color: $navLinesColor;
+        font-family: "Source Sans Pro";
+    }
+}
+
+@include breakpoint($desktop) {
+
+    footer {
+        .footer-container {
+            display: grid;
+            grid-template-columns: 80% 20%;
+        }
+
+        .item-2 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .item-3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            justify-self: end;
+            padding-right: $desktop-content-side-pad;
+        }
+
+        h4 {
+            font-size: rem(34);
+            padding-bottom: 8px;
+        }
+    
+        p {
+            font-size: 1.2rem;
+        }
+    
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    }
+}

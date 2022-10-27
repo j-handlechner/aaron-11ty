@@ -1,0 +1,56 @@
+@include breakpoint(0, $mobile) {
+    #hamburger {
+        & + ul {
+            text-align: right;
+            position: absolute;
+            width: 75vw;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            z-index: 9;
+
+            padding-right: 1rem;
+            padding-top: 40px;
+            background-color: $navGray;
+
+            transform: translateX(100%);
+
+            li {
+                margin-top:25px;
+                font-family: "Source Sans Pro";
+                font-weight: 300;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.45rem;
+                    display: inline;
+                }
+            }
+
+            &.transition {
+                transition: 0.5s ease-in-out transform;
+            }
+        }
+
+        &[aria-label="opened"] {
+            .line-1 {
+                transform-origin: center left;
+                transform: rotate(45deg);
+                left: 8px;
+            }
+
+            .line-2 {
+                width: 100%;
+                transform: rotate(-45deg);
+                transform-origin: center right;
+                top: 0px;
+            }
+
+            & + ul {
+                transform: translateX(0%)
+            }
+        }
+    }
+}
+

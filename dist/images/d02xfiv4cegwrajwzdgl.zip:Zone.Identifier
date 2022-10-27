@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.responsivebreakpoints.com/
+HostUrl=https://api.cloudinary.com/v1_1/responsivebreakpoints/image/generate_archive?api_key=219944828214243&mode=download&public_ids[]=workshop_snapshot_whqaqt&signature=2747eaed843c969ed86a5ecf07a36e889de4734d&target_format=zip&timestamp=1666301815&transformations=c_scale%2Cw_1400%7Cc_scale%2Cw_1349%7Cc_scale%2Cw_1228%7Cc_scale%2Cw_948%7Cc_scale%2Cw_200

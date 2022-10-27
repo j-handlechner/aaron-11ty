@@ -1,0 +1,92 @@
+header {
+    width: 100%;
+    position: relative;
+    background-color: black;
+
+    a {
+        text-decoration: none;  
+        width: fit-content;
+        display: block;
+        
+        h1 {
+            color: white;
+            width: fit-content;
+            letter-spacing: 0.24px;
+            text-transform: uppercase;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .headline-button-wrapper {
+        position: absolute;
+
+        h2 {
+            color: $primary;
+        }
+
+        a {
+            @include button(white, black, true);
+        }
+    }
+}
+
+@include breakpoint($desktop) {
+    header {
+        height: 80vh;
+        background-image: url("../images/aaron-hero.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+
+        h1 {
+            padding-top: $desktop-content-side-pad;
+            padding-left: $desktop-content-side-pad;
+
+            font-size: rem(18);
+        }
+
+        .headline-button-wrapper {
+            top: 35%;
+            left: 10%;
+
+            h2 {
+                font-size: 3.55rem;
+            }
+
+            a {
+                margin-top: 7.5%;
+            }
+        }
+    }
+}
+
+
+@include breakpoint(0, $mobile) {
+    header {
+        background-image: url("../images/aaron-hero.png");
+        background-size: cover;
+        aspect-ratio: 1 / 1;
+
+        a {
+            h1 {
+                font-size: rem(16);
+                padding-left: 1rem;
+                padding-top: 1rem;
+            }
+        }
+
+        .headline-button-wrapper {
+            bottom: 20%;
+            right: 0;
+            padding-right: 8%;
+            width: 50%;
+
+            h2 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+        }
+    }
+}

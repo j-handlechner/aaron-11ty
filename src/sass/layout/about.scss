@@ -1,0 +1,75 @@
+#about {
+    background-color: $about-lightyellow;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    #about {
+
+        padding-top: $section-pad;
+        padding-bottom: $section-pad;
+
+        img {
+            width: 100%;
+        }
+
+        .text-content {
+            margin: 0 $content-side-pad;
+
+            .super-headline {
+                margin-top: 15px;
+            }
+    
+            p {
+                margin-top: $content-side-pad;
+                font-size: 1rem;
+            }
+    
+            a {
+                @include button(black);
+            }
+        }
+    }
+}
+
+@include breakpoint($desktop) {
+    .full-bleed {
+        box-shadow: 0 0 0 100vmax $about-lightyellow;
+        clip-path: inset(0 -100vmax);
+    }
+
+    #about {
+        padding-top: $desktop-section-pad;
+        padding-bottom: $desktop-section-pad;
+
+        .about-container {
+            display: flex;
+        }
+
+        img {
+            width: 50%;
+            object-fit: cover;
+        }
+
+        .text-content {
+            margin: 0 45px;
+            width: 35%;
+
+            .super-headline {
+                margin-top: 15px;
+            }
+    
+            p {
+                margin-top: $desktop-content-side-pad;
+                font-size: 1.2rem;
+            }
+    
+            a {
+                @include button(black, transparent, true);
+            }
+        }
+    }
+}

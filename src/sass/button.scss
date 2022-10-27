@@ -1,0 +1,23 @@
+@mixin button($textcolor: white, $background: transparent, $isDesktop: false) {
+    color: $textcolor;
+    text-transform: uppercase;
+    border: $primary solid 1px;
+    padding: 12.5px 25px;
+    display: block;
+    margin-top: 20px;
+    width: fit-content;
+    text-decoration: none;
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    background-color: $background;
+    text-align: center;
+
+    @if($isDesktop) {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

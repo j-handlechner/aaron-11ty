@@ -1,0 +1,26 @@
+// BREAKPOINTS
+$mobile: 799;
+$desktop: $mobile + 1;
+
+// COLORS
+$bggray: hsl(207, 8%, 22%);
+$navGray: #363636;
+$about-lightyellow: #FFF7F2;
+
+$primary: #ef9d5f;
+$navLinesColor: #FFAD6E;
+
+$light-gray: #D5D5D5;
+$lightest-gray: #F7F7F7;
+
+$medium-gray: hsl(210, 3%, 27%);
+$dark-gray: #363636;
+
+$content-side-pad: 20px;
+$section-pad: 50px;
+
+$grid-spacing: 124px;
+
+$desktop-section-pad: 100px;
+$desktop-content-side-pad: 32px;
+$desktop-content-max-width: 1500px;

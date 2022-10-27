@@ -1,0 +1,22 @@
+@include breakpoint(0, $mobile) {
+    // why is that necessary? overflow-x: hidden in body or html does not work on mobile devices because of meta tag. -> need to wrap everything
+    .hide-overflow-x {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    main {
+        .super-headline {
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.65rem;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+        }
+    }
+   
+}

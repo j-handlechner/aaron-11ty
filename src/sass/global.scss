@@ -1,0 +1,42 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.super-headline {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $dark-gray;
+}
+
+h1, h2, h3, h4, p, blockquote, a {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+}
+
+h2, h3 {
+  color: $primary;
+}
+
+p {
+  line-height: 1.5;
+}
+
+@include breakpoint(0, $mobile) {
+  .only-mobile {
+    display: block;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+}
+
+@include breakpoint($mobile + 1) {
+  .only-mobile {
+    display: none;
+  }
+
+  .only-desktop {
+    display: block;
+  }
+}

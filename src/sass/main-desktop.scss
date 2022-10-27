@@ -1,0 +1,21 @@
+@include breakpoint($mobile + 1) {
+    main {
+        width: 100%;
+        padding-left: $desktop-content-side-pad;
+        padding-right: $desktop-content-side-pad;
+        max-width: 1500px;
+        margin: 0 auto;
+
+        .super-headline {
+            font-size: 1.15rem;
+        }
+
+        h2 {
+            font-size: 3.55rem;
+        }
+          
+        h3 {
+            font-size: 1.75rem;
+        }
+    }
+}

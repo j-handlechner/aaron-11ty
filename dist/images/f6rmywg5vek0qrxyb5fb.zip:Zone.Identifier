@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.responsivebreakpoints.com/
+HostUrl=https://api.cloudinary.com/v1_1/responsivebreakpoints/image/generate_archive?api_key=219944828214243&mode=download&public_ids[]=dance_pool_group_pic_m9qg0e&signature=9d503de42ebf0c10262704eede5f30560571b8da&target_format=zip&timestamp=1666301660&transformations=c_scale%2Cw_1400%7Cc_scale%2Cw_1283%7Cc_scale%2Cw_1157%7Cc_scale%2Cw_803%7Cc_scale%2Cw_200

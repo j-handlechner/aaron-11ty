@@ -1,0 +1,29 @@
+@include breakpoint($mobile + 1) {
+    nav {
+        position: absolute;
+        top: $desktop-content-side-pad;
+        right: $desktop-content-side-pad;
+
+        button {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            column-gap: 2.5rem;
+
+            li {
+                a {
+                    color: $primary;
+                    text-decoration: none;  
+                    font-weight: 600; 
+                    text-transform: uppercase; 
+                    font-size: rem(18);
+                    
+                    border-bottom: 1px solid $primary;
+                    padding-bottom: 3px;
+                }
+            }
+        }
+    }
+}
