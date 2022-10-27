@@ -69,6 +69,7 @@
     
             a {
                 @include button(black, transparent, true);
+                margin-bottom: 15px;
             }
         }
     }

@@ -786,6 +786,7 @@ header .headline-button-wrapper a:hover {
     text-align: center;
     font-size: 1.1rem;
     padding: 15px 30px;
+    margin-bottom: 15px;
   }
   #about .text-content a:hover {
     cursor: pointer;
