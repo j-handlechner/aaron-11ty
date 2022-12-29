@@ -366,7 +366,7 @@ header .headline-button-wrapper a {
   font-weight: 600;
   background-color: black;
   text-align: center;
-  transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+  transition: 0.35s ease-in-out background-color;
   font-size: 1.1rem;
   padding: 15px 30px;
   color: white;
@@ -492,7 +492,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    transition: 0.35s ease-in-out background-color;
     font-size: 1.1rem;
     padding: 15px 30px;
   }
@@ -685,7 +685,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    transition: 0.35s ease-in-out background-color;
     margin-bottom: 30px;
   }
   #workshops .workshop-grid .level a:hover {
@@ -766,7 +766,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    transition: 0.35s ease-in-out background-color;
     font-size: 1.1rem;
     padding: 15px 30px;
     margin-bottom: 15px;
@@ -806,7 +806,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    transition: 0.35s ease-in-out background-color;
   }
   #about .text-content a:hover {
     cursor: pointer;
@@ -876,7 +876,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    transition: 0.35s ease-in-out background-color;
     font-size: 1.1rem;
     padding: 15px 30px;
     margin-left: 32px;
@@ -941,7 +941,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
+    transition: 0.35s ease-in-out background-color;
     margin-left: 20px;
   }
   #news article .button:hover {
