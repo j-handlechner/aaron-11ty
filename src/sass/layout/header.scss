@@ -28,7 +28,9 @@ header {
         }
 
         a {
+            color: inherit;
             @include button(white, black, true);
+            color: white;
         }
 
         a:hover {

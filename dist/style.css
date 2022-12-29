@@ -353,6 +353,7 @@ header .headline-button-wrapper h2 {
   color: #ef9d5f;
 }
 header .headline-button-wrapper a {
+  color: inherit;
   color: white;
   text-transform: uppercase;
   border: #ef9d5f solid 1px;
@@ -368,6 +369,7 @@ header .headline-button-wrapper a {
   transition: 0.35s ease-in-out background-color, 0.35s ease-in-out color;
   font-size: 1.1rem;
   padding: 15px 30px;
+  color: white;
 }
 header .headline-button-wrapper a:hover {
   cursor: pointer;
