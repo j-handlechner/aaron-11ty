@@ -4,33 +4,11 @@
     img {
         object-fit: cover;
     }
-}
 
-@include breakpoint(0, $mobile) {
-    #about {
-
-        padding-top: $section-pad;
-        padding-bottom: $section-pad;
-
-        img {
-            width: 100%;
-        }
-
-        .text-content {
-            margin: 0 $content-side-pad;
-
-            .super-headline {
-                margin-top: 15px;
-            }
-    
-            p {
-                margin-top: $content-side-pad;
-                font-size: 1rem;
-            }
-    
-            a {
-                @include button(black);
-            }
+    .text-content {
+        a:hover {
+            background-color: $primary;
+            color: white
         }
     }
 }
@@ -74,3 +52,33 @@
         }
     }
 }
+
+@include breakpoint(0, $mobile) {
+    #about {
+
+        padding-top: $section-pad;
+        padding-bottom: $section-pad;
+
+        img {
+            width: 100%;
+        }
+
+        .text-content {
+            margin: 0 $content-side-pad;
+
+            .super-headline {
+                margin-top: 15px;
+            }
+    
+            p {
+                margin-top: $content-side-pad;
+                font-size: 1rem;
+            }
+    
+            a {
+                @include button(black);
+            }
+        }
+    }
+}
+

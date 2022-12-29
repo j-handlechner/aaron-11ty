@@ -30,6 +30,11 @@ header {
         a {
             @include button(white, black, true);
         }
+
+        a:hover {
+            background-color: $primary;
+            color: black;
+        }
     }
 }
 

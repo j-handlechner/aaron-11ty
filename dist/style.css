@@ -243,7 +243,7 @@ p {
 }
 footer {
   background-color: #363636;
-  padding-left: 40px;
+  padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -263,6 +263,9 @@ footer a {
 }
 
 @media (min-width: 50rem) {
+  footer {
+    padding-left: 40px;
+  }
   footer .footer-container {
     display: grid;
     grid-template-columns: 80% 20%;
@@ -362,11 +365,16 @@ header .headline-button-wrapper a {
   font-weight: 600;
   background-color: black;
   text-align: center;
+  transition: 0.35s ease-in-out;
   font-size: 1.1rem;
   padding: 15px 30px;
 }
 header .headline-button-wrapper a:hover {
   cursor: pointer;
+}
+header .headline-button-wrapper a:hover {
+  background-color: #ef9d5f;
+  color: black;
 }
 
 @media (min-width: 50rem) {
@@ -414,6 +422,11 @@ header .headline-button-wrapper a:hover {
     font-size: clamp(2rem, 8vw, 2.5rem);
   }
 }
+#workshops .workshop-grid .level .step-content .step-text a:hover {
+  background-color: #ef9d5f;
+  color: black;
+}
+
 @media (min-width: 50rem) {
   #workshops {
     padding-top: 100px;
@@ -479,6 +492,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
+    transition: 0.35s ease-in-out;
     font-size: 1.1rem;
     padding: 15px 30px;
   }
@@ -671,6 +685,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
+    transition: 0.35s ease-in-out;
     margin-bottom: 30px;
   }
   #workshops .workshop-grid .level a:hover {
@@ -707,43 +722,11 @@ header .headline-button-wrapper a:hover {
 #about img {
   object-fit: cover;
 }
-
-@media (min-width: 0rem) and (max-width: 49.9375rem) {
-  #about {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  #about img {
-    width: 100%;
-  }
-  #about .text-content {
-    margin: 0 20px;
-  }
-  #about .text-content .super-headline {
-    margin-top: 15px;
-  }
-  #about .text-content p {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-  #about .text-content a {
-    color: black;
-    text-transform: uppercase;
-    border: #ef9d5f solid 1px;
-    padding: 12.5px 25px;
-    display: block;
-    margin-top: 20px;
-    width: fit-content;
-    text-decoration: none;
-    font-family: "Source Sans Pro";
-    font-weight: 600;
-    background-color: transparent;
-    text-align: center;
-  }
-  #about .text-content a:hover {
-    cursor: pointer;
-  }
+#about .text-content a:hover {
+  background-color: #ef9d5f;
+  color: white;
 }
+
 @media (min-width: 50rem) {
   .full-bleed {
     box-shadow: 0 0 0 100vmax #FFF7F2;
@@ -784,6 +767,7 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
+    transition: 0.35s ease-in-out;
     font-size: 1.1rem;
     padding: 15px 30px;
     margin-bottom: 15px;
@@ -793,44 +777,24 @@ header .headline-button-wrapper a:hover {
   }
 }
 @media (min-width: 0rem) and (max-width: 49.9375rem) {
-  #news {
+  #about {
     padding-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-bottom: 50px;
   }
-  #news h2 {
-    margin-bottom: 20px;
-  }
-  #news article {
-    background-color: #F7F7F7;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-  }
-  #news article:last-of-type {
-    margin-bottom: 50px;
-  }
-  #news article h3 a {
-    margin-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: block;
-    font-family: "Source Sans Pro";
-    font-weight: 300;
-    color: #ef9d5f;
-    text-decoration: none;
-  }
-  #news article img {
-    height: 250px;
+  #about img {
     width: 100%;
-    object-fit: cover;
   }
-  #news article p {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+  #about .text-content {
+    margin: 0 20px;
+  }
+  #about .text-content .super-headline {
+    margin-top: 15px;
+  }
+  #about .text-content p {
+    margin-top: 20px;
     font-size: 1rem;
   }
-  #news article .button {
+  #about .text-content a {
     color: black;
     text-transform: uppercase;
     border: #ef9d5f solid 1px;
@@ -843,12 +807,17 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
-    margin-left: 20px;
+    transition: 0.35s ease-in-out;
   }
-  #news article .button:hover {
+  #about .text-content a:hover {
     cursor: pointer;
   }
 }
+#news article a:hover {
+  background-color: #ef9d5f;
+  color: white;
+}
+
 @media (min-width: 50rem) {
   #news {
     padding-top: 100px;
@@ -869,18 +838,20 @@ header .headline-button-wrapper a:hover {
     background-color: #F7F7F7;
     width: calc(33.3% - 32px);
   }
-  #news article h3 a {
-    margin-left: 32px;
+  #news article h3 {
+    margin-left: 16px;
     padding-top: 21.3333333333px;
     padding-bottom: 21.3333333333px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    display: block;
-    font-family: "Source Sans Pro";
-    font-weight: 300;
+  }
+  #news article h3 a {
     color: #ef9d5f;
-    text-decoration: none;
+  }
+  #news article h3 a:hover {
+    background-color: transparent;
+    color: #ef9d5f;
   }
   #news article img {
     height: 275px;
@@ -906,10 +877,73 @@ header .headline-button-wrapper a:hover {
     font-weight: 600;
     background-color: transparent;
     text-align: center;
+    transition: 0.35s ease-in-out;
     font-size: 1.1rem;
     padding: 15px 30px;
     margin-left: 32px;
     margin-bottom: 32px;
+  }
+  #news article .button:hover {
+    cursor: pointer;
+  }
+}
+@media (min-width: 0rem) and (max-width: 49.9375rem) {
+  #news {
+    padding-top: 50px;
+    max-width: 425px;
+  }
+  #news h2, #news .super-headline {
+    margin-left: 20px;
+  }
+  #news h2 {
+    margin-bottom: 16px;
+  }
+  #news article {
+    background-color: #F7F7F7;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+  #news article:last-of-type {
+    margin-bottom: 50px;
+  }
+  #news article h3 {
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #news article h3 a {
+    color: #ef9d5f;
+  }
+  #news article h3 a:hover {
+    background-color: transparent;
+    color: #ef9d5f;
+  }
+  #news article img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  #news article p {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2rem;
+  }
+  #news article .button {
+    color: black;
+    text-transform: uppercase;
+    border: #ef9d5f solid 1px;
+    padding: 12.5px 25px;
+    display: block;
+    margin-top: 20px;
+    width: fit-content;
+    text-decoration: none;
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    background-color: transparent;
+    text-align: center;
+    transition: 0.35s ease-in-out;
+    margin-left: 20px;
   }
   #news article .button:hover {
     cursor: pointer;

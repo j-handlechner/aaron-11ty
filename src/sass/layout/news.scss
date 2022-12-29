@@ -1,59 +1,13 @@
-@include breakpoint(0, $mobile) {
-    #news {
-        padding-top: $section-pad;
-        margin-left: $content-side-pad;
-        margin-right: $content-side-pad;
-
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        article {
-            background-color: $lightest-gray;
-            margin-bottom: 2 * $content-side-pad;
-            padding-bottom: $content-side-pad;
-
-            &:last-of-type {
-                margin-bottom: $section-pad;
-            }
-
-            h3 {
-                a {
-                    margin-left: $content-side-pad;
-                    padding-top: $content-side-pad / 2;
-                    padding-bottom: $content-side-pad / 2;
-
-                    display: block;
-
-                    font-family: "Source Sans Pro";
-                    font-weight: 300;
-                    color: $primary;
-                    text-decoration: none;
-                }
-            }
-
-            img {
-                height: 250px;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            p {
-                padding-top: $content-side-pad;
-                padding-left: $content-side-pad;
-                padding-right: $content-side-pad;
-                font-size: 1rem;
-            }
-
-            .button {
-                @include button(black);
-                margin-left: $content-side-pad;
-            }
+#news {
+    article {
+        a:hover {
+            background-color: $primary;
+            color: white;
         }
     }
 }
 
-@include breakpoint($mobile + 1) {
+@include breakpoint($desktop) {
     #news {
         padding-top: $desktop-section-pad;
         padding-bottom: $desktop-section-pad;
@@ -76,22 +30,23 @@
             width: calc(33.3% - $desktop-content-side-pad);
 
             h3 {
+                margin-left: $desktop-content-side-pad / 2;
+                padding-top: $desktop-content-side-pad / 1.5;
+                padding-bottom: $desktop-content-side-pad / 1.5;
+
+                // to not make a second line of text -> instead "..." at the end of visible text
+                text-overflow: ellipsis;
+
+                overflow: hidden;
+                white-space: nowrap;
+
                 a {
-                    margin-left: $desktop-content-side-pad;
-                    padding-top: $desktop-content-side-pad / 1.5;
-                    padding-bottom: $desktop-content-side-pad / 1.5;
-    
-                    // to not make a second line of text -> instead "..." at the end of visible text
-                    text-overflow: ellipsis;
-    
-                    overflow: hidden;
-                    white-space: nowrap;
-                    
-                    display: block;
-                    font-family: "Source Sans Pro";
-                    font-weight: 300;
                     color: $primary;
-                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: transparent;
+                    color: $primary;
                 }
             }
 
@@ -112,6 +67,65 @@
                 @include button(black, transparent, true);
                 margin-left: $desktop-content-side-pad;
                 margin-bottom: $desktop-content-side-pad;
+            }
+        }
+    }
+}
+
+@include breakpoint(0, $mobile) {
+    #news {
+        padding-top: $section-pad;
+        max-width: 425px;
+
+        h2, .super-headline {
+            margin-left: 20px;
+        }
+        
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        article {
+            background-color: $lightest-gray;
+            margin-bottom: 2 * $content-side-pad;
+            padding-bottom: $content-side-pad;
+
+            &:last-of-type {
+                margin-bottom: $section-pad;
+            }
+
+            h3 {
+                margin-left: $content-side-pad;
+                padding-top: $content-side-pad / 2;
+                padding-bottom: $content-side-pad / 2;
+
+                a {
+                    color: $primary;
+                }
+                
+                a:hover {
+                    background-color: transparent;
+                    color: $primary;
+                }
+
+            }
+
+            img {
+                height: 250px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            p {
+                padding-top: $content-side-pad;
+                padding-left: $content-side-pad;
+                padding-right: $content-side-pad;
+                font-size: 1.2rem;
+            }
+
+            .button {
+                @include button(black);
+                margin-left: $content-side-pad;
             }
         }
     }

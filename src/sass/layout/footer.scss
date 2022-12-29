@@ -1,6 +1,6 @@
 footer {
     background-color: $navGray;
-    padding-left: 2 * $content-side-pad;
+    padding-left: $content-side-pad;
     padding-top: $content-side-pad;
     padding-bottom: $content-side-pad * 2;
 
@@ -23,8 +23,8 @@ footer {
 }
 
 @include breakpoint($desktop) {
-
     footer {
+        padding-left: 2 * $content-side-pad;
         .footer-container {
             display: grid;
             grid-template-columns: 80% 20%;
