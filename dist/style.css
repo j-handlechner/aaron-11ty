@@ -376,7 +376,6 @@ header .headline-button-wrapper a:hover {
 }
 header .headline-button-wrapper a:hover {
   background-color: #ef9d5f;
-  color: black;
 }
 
 @media (min-width: 50rem) {
@@ -426,7 +425,6 @@ header .headline-button-wrapper a:hover {
 }
 #workshops .workshop-grid .level .step-content .step-text a:hover {
   background-color: #ef9d5f;
-  color: black;
 }
 
 @media (min-width: 50rem) {
@@ -726,7 +724,6 @@ header .headline-button-wrapper a:hover {
 }
 #about .text-content a:hover {
   background-color: #ef9d5f;
-  color: white;
 }
 
 @media (min-width: 50rem) {
